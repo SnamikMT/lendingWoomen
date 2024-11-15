@@ -1,0 +1,67 @@
+/* src/styles/Testimonials.css */
+.testimonials {
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+  }
+  
+  .testimonials h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .testimonials-slider {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px; /* Отступ между карточками */
+    padding: 20px 0;
+  }
+  
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 280px; /* Фиксированная минимальная ширина карточек */
+    max-width: 280px; /* Фиксированная максимальная ширина карточек */
+    height: 100%; /* Задает одинаковую высоту для всех карточек */
+    box-sizing: border-box;
+  }
+  
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-text {
+    font-size: 1.1em;
+    color: #666;
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  .testimonial-author {
+    font-size: 0.9em;
+    color: #888;
+    font-style: italic;
+  }
+  
+  /* Стили для карусели */
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-list {
+    padding: 0 20px; /* Отступы для крайних карточек */
+  }
+  

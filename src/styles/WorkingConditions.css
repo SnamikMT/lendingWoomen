@@ -1,0 +1,61 @@
+/* src/components/WorkingConditions.css */
+.working-conditions {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .working-conditions-content {
+    max-width: 50%;
+  }
+  
+  .working-conditions h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff007a;
+  }
+  
+  .working-conditions p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .apply-button {
+    background-color: #ff007a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+  
+  .apply-button:hover {
+    background-color: #e6006b;
+  }
+  
+  .working-conditions-benefits {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .benefit h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff007a;
+    margin-bottom: 10px;
+  }
+  
+  .benefit p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+  }
+  
