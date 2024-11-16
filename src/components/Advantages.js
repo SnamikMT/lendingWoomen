@@ -1,4 +1,3 @@
-// src/components/Advantages.js
 import React from 'react';
 import '../styles/Advantages.css';
 import { FaMoneyBillAlt, FaCalendarAlt, FaRegSmile, FaLock, FaMapMarkerAlt, FaUserShield } from 'react-icons/fa';
@@ -22,7 +21,12 @@ const advantages = [
 function Advantages() {
   return (
     <section className="advantages">
-      <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
+      <div className="advantages-title">
+        <h2>
+          <span>НАШИ</span><br />
+          ПРЕИМУЩЕСТВА
+        </h2>
+      </div>
       <div className="advantages-grid">
         {advantages.map((adv, index) => (
           <div key={index} className="advantage-item">

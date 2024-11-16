@@ -1,72 +1,106 @@
-/* src/components/Offer.css */
 .offer-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #fff;
+  padding: 60px 20px 5% 8%;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start; /* Выравнивание секций по верху */
+  justify-content: space-between; /* Равномерное распределение секций */
+  gap: 40px; /* Отступ между секциями */
+}
+
+.offer-section h2 {
+  font-size: 60px;
+  color: #ff007f;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.offer-section h2 span {
+  color: #333;
+}
+
+.offer-description {
+  color: #666;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.offer-link {
+  color: #ff007f;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.offer-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две карточки в строке */
+  grid-auto-rows: auto; /* Высота строк зависит от содержимого */
+  gap: 20px; /* Расстояние между карточками */
+  justify-content: center; /* Центрирование карточек */
+  max-width: 600px; /* Ограничение ширины сетки */
+}
+
+.offer-card {
+  width: 100%; /* Карточка подстраивается под размер ячейки */
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.offer-card:hover {
+  transform: scale(1.05);
+}
+
+.offer-icon {
+  font-size: 36px;
+  color: #ff007f;
+  margin-bottom: 15px;
+}
+
+.offer-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.offer-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.firstSection,
+.twoSection {
+  flex: 1; /* Каждая секция занимает равное место */
+}
+
+.firstSection {
+  max-width: 40%; /* Ограничение ширины текстовой секции */
+}
+
+.twoSection {
+  max-width: 50%; /* Ограничение ширины секции карточек */
+}
+
+@media (max-width: 1024px) {
+  .offer-section {
+      flex-direction: column; /* На маленьких экранах секции становятся вертикальными */
+      align-items: center;
+      text-align: center;
   }
-  
-  .offer-section h2 {
-    font-size: 48px;
-    color: #ff007f;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+  .firstSection,
+  .twoSection {
+      max-width: 100%; /* На маленьких экранах секции занимают всю ширину */
   }
-  
-  .offer-section h2 span {
-    color: #333;
-  }
-  
-  .offer-description {
-    color: #666;
-    font-size: 16px;
-    max-width: 700px;
-    margin: 0 auto 20px;
-  }
-  
-  .offer-link {
-    color: #ff007f;
-    font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 40px;
-    display: inline-block;
-  }
-  
+
   .offer-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
+      justify-content: center;
   }
-  
-  .offer-card {
-    width: 250px;
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s;
-  }
-  
-  .offer-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .offer-icon {
-    font-size: 36px;
-    color: #ff007f;
-    margin-bottom: 15px;
-  }
-  
-  .offer-card h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .offer-card p {
-    font-size: 14px;
-    color: #666;
-  }
-  
+}

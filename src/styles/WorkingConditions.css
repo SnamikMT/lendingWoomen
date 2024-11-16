@@ -1,61 +1,98 @@
-/* src/components/WorkingConditions.css */
 .working-conditions {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .working-conditions-content {
-    max-width: 50%;
-  }
-  
-  .working-conditions h2 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #ff007a;
-  }
-  
-  .working-conditions p {
-    margin-bottom: 15px;
-    font-size: 1em;
-    color: #333;
-  }
-  
-  .apply-button {
-    background-color: #ff007a;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-  }
-  
-  .apply-button:hover {
-    background-color: #e6006b;
-  }
-  
-  .working-conditions-benefits {
-    max-width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .benefit h3 {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #ff007a;
-    margin-bottom: 10px;
-  }
-  
-  .benefit p {
-    font-size: 1em;
-    color: #333;
-    margin: 0;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px 5% 8%;
+  background-color: #f9f9f9; /* Общий фон секции */
+}
+
+.working-conditions-content {
+  max-width: 50%;
+  z-index: 1;
+  padding-right: 1%;
+}
+
+.working-conditions h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ff007a;
+  padding-bottom: 10px;
+}
+
+.working-conditions span {
+  color: #333;
+}
+
+.working-conditions p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.apply-button {
+  background-color: #ff007a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+  background-color: #e6006b;
+}
+
+/* Стиль для benefits с фоном */
+.working-conditions-benefits {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  background: url('../assets/background-image.jpg') no-repeat center right; /* Фон для benefits */
+  background-size: cover;
+  border-radius: 15px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Градиент с прозрачностью, плавно увеличивающейся до середины */
+.working-conditions-benefits::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(249 249 249) 34%, rgba(255, 255, 255, 0) 101%);
+  z-index: 0;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 1; /* Поверх фона и прозрачности */
+}
+
+.benefit-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.benefit h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff007a;
+  margin-bottom: 10px;
+}
+
+.benefit p {
+  font-size: 1em;
+  color: #333;
+  margin: 0;
+  width: 50%;
+}

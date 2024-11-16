@@ -1,6 +1,6 @@
-// src/components/ContactForm.js
 import React, { useState } from 'react';
 import '../styles/ContactForm.css';
+import { FaWhatsapp } from 'react-icons/fa'; // Пакет react-icons для иконки WhatsApp
 
 function ContactForm() {
   const [name, setName] = useState('');
@@ -8,24 +8,31 @@ function ContactForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Здесь можно добавить обработчик для отправки данных
     alert(`Заявка отправлена:\nИмя: ${name}\nТелефон: ${phone}`);
   };
 
   return (
-    <section className="contact-section">
+    <section id="form" className="contact-section">
       <div className="contact-info">
-        <h2>ЗАДАТЬ ВОПРОС</h2>
-        <p>Остались вопросы? Ответим на все!</p>
-        <a href="tel:+79258255380" className="contact-phone">+7(925)825-53-80</a>
-        <a href="https://wa.me/79258255380" className="contact-whatsapp">WhatsApp</a>
+        <h2>Свяжитесь с нами</h2>
+        <p>Остались вопросы? Мы с радостью ответим!</p>
+
+        <div className="contact-links">
+        <a href="tel:+79258255380" className="contact-link">
+          +7 (925) 825-53-80
+        </a>
+        <a href="https://wa.me/79258255380" className="contact-link whatsapp-icon">
+          <FaWhatsapp size={32} /> {/* Иконка WhatsApp */}
+        </a>
+      </div>
       </div>
 
       <form className="contact-form" onSubmit={handleSubmit}>
-        <h3>Заполните анкету</h3>
-        <label>
+        <h3>Оставить заявку</h3>
+        <label htmlFor="name">
           Ваше имя
           <input
+            id="name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -33,9 +40,10 @@ function ContactForm() {
             placeholder="Введите ваше имя"
           />
         </label>
-        <label>
+        <label htmlFor="phone">
           Ваш телефон
           <input
+            id="phone"
             type="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -43,7 +51,12 @@ function ContactForm() {
             placeholder="+7XXXYYYYYYY"
           />
         </label>
-        <button type="submit">Отправить заявку</button>
+        <button type="submit" className="submit-button">
+          Отправить заявку
+        </button>
+        <p className="disclaimer">
+          Вы ничем не рискуете! Если наша вакансия вас устроит, вы будете приглашены на собеседование.
+        </p>
       </form>
     </section>
   );

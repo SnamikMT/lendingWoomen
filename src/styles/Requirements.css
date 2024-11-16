@@ -1,56 +1,77 @@
-/* src/components/Requirements.css */
 .requirements {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-    background-color: #fff;
-  }
-  
-  .requirements-content {
-    max-width: 800px;
-    color: #333;
-  }
-  
-  .requirements h2 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #ff007a;
-    margin-bottom: 20px;
-  }
-  
-  .requirements p {
-    font-size: 1em;
-    margin-bottom: 15px;
-    line-height: 1.5;
-  }
-  
-  .requirements h3 {
-    font-size: 1.5em;
-    color: #ff007a;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
-  
-  .requirements ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .requirements ul li {
-    font-size: 1em;
-    margin-bottom: 10px;
-  }
-  
-  .requirements-link {
-    display: inline-block;
-    color: #ff007a;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .requirements-link:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.requirements-image {
+  flex: 1;
+  width: 56%;
+  height: 100%;
+  min-height: 400px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 70%, rgb(249, 249, 249) 95%), 
+              url('../assets/requirements.jpg') no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Картинка позади текста */
+}
+
+.requirements-content {
+  flex: 2;
+  position: relative;
+  z-index: 1;
+  margin-left: 53%; /* Текст слегка заезжает на картинку */
+  color: #333;
+}
+
+.requirements h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ff007a;
+  margin-bottom: 20px;
+}
+
+.requirements span {
+  color: #333;
+}
+
+.requirements p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.requirements h3 {
+  font-size: 1.5em;
+  color: #ff007a;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.requirements ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.requirements ul li {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.requirements-link {
+  display: inline-block;
+  color: #ff007a;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.requirements-link:hover {
+  text-decoration: underline;
+}

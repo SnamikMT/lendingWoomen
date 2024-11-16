@@ -10,7 +10,7 @@ import girl1 from '../assets/girl1.png';
 import girl2 from '../assets/girl2.png';
 import girl3 from '../assets/girl3.png';
 import girl4 from '../assets/girl4.png';
-import olgaImage from '../assets/girl4.png';
+import olgaImage from '../assets/girl5.png';
 import elenaImage from '../assets/girl4.png';
 
 const testimonials = [
@@ -79,8 +79,8 @@ function Testimonials() {
   };
 
   return (
-    <section className="testimonials">
-      <h2>ОТЗЫВЫ НАШИХ СОТРУДНИЦ</h2>
+    <section id="rev" className="testimonials">
+      <h2>ОТЗЫВЫ <span>НАШИХ СОТРУДНИЦ</span></h2>
       <Slider {...settings} className="testimonials-slider">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card">

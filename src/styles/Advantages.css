@@ -1,44 +1,86 @@
-/* src/components/Advantages.css */
 .advantages {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-  }
-  
-  .advantages h2 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #ff007a;
-    margin-bottom: 20px;
-  }
-  
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.advantages-title {
+  max-width: 900px; /* Ограничение ширины */
+  margin: 0 auto; /* Центрирование блока */
+  text-align: left; /* Выравнивание текста влево */
+  margin-bottom: 30px;
+}
+
+.advantages-title h2 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #ff007a;
+}
+
+.advantages-title h2 span {
+  color: #333; /* Черный цвет для слова "Наши" */
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.advantage-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 2em;
+  color: #ff007a;
+}
+
+.advantage-item p {
+  font-size: 1em;
+  color: #333;
+  margin: 0;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
   .advantages-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+    grid-template-columns: 1fr; /* Одноколоночная структура */
   }
-  
+
   .advantage-item {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 15px;
+    padding: 15px;
+    flex-direction: column; /* Иконка и текст в столбик */
+    text-align: center;
   }
-  
+
   .icon {
-    font-size: 2em;
-    color: #ff007a;
+    margin-bottom: 10px;
   }
-  
+
   .advantage-item p {
-    font-size: 1em;
-    color: #333;
-    margin: 0;
+    font-size: 0.9em; /* Уменьшаем шрифт текста */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .advantages-title h2 {
+    font-size: 1.5em; /* Уменьшаем размер заголовка */
+  }
+
+  .advantage-item p {
+    font-size: 0.85em; /* Еще меньше текст */
+  }
+
+  .icon {
+    font-size: 1.8em; /* Уменьшаем размер иконки */
+  }
+}

@@ -1,12 +1,17 @@
-// src/components/Requirements.js
 import React from 'react';
+import { Link } from 'react-scroll'; // Импортируем библиотеку
 import '../styles/Requirements.css';
+import requirementsImage from '../assets/requirements.jpg'; // Путь к картинке
 
 function Requirements() {
   return (
-    <section className="requirements">
+    <section id="req" className="requirements">
+      <div className="requirements-image"></div> {/* Картинка с градиентом */}
       <div className="requirements-content">
-        <h2>ТРЕБОВАНИЯ К СОИСКАТЕЛЬНИЦЕ</h2>
+        <h2>
+          ТРЕБОВАНИЯ <span>К</span><br />
+          <span>СОИСКАТЕЛЬНИЦЕ</span>
+        </h2>
         <p>
           Работа в сфере эскорта является весьма престижной, поэтому агентства выставляют определенные требования к эскорт-моделям, в большей части касающиеся их внешних данных и манер.
         </p>
@@ -22,7 +27,17 @@ function Requirements() {
           <li>Должна быть ответственной и пунктуальной. Не должна опаздывать.</li>
           <li>Дополнительным преимуществом будет знание иностранного языка.</li>
         </ul>
-        <a href="#form" className="requirements-link">ЗАПОЛНИТЬ АНКЕТУ</a>
+        <a
+          href="#form"
+          className="requirements-link"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          ЗАПОЛНИТЬ АНКЕТУ
+        </a>
+
       </div>
     </section>
   );

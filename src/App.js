@@ -1,7 +1,6 @@
 // src/App.js
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
+import HeaderHero from './components/HeaderHero';
 import FAQ from './components/FAQ';
 import Offer from './components/Offer';
 import Requirements from './components/Requirements';
@@ -13,14 +12,13 @@ import ContactForm from './components/ContactForm';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <FAQ /> 
+      <HeaderHero />
       <Offer /> 
       <Requirements />
-      <Advantages />
       <WorkingConditions />
       <Testimonials />
+      <Advantages />
+      <FAQ /> 
       <ContactForm />
     </div>
   );
